@@ -1,0 +1,10 @@
+%YAML:1.0
+---
+unit:0
+cameraNumberL:0
+cameraNumberR:1
+frameWidth:640
+frameHeight:480
+gridW:7
+gridH:8
+cutFrameNumber:10
