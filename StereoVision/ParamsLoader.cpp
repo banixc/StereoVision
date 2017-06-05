@@ -11,6 +11,7 @@ ParamsLoader::ParamsLoader()
 	if (!fs.isOpened())
 		return ;
 	//相机序号 相机参数 标定板角点参数 截取图片数量
+	fs["mod"] >> mod;
 	fs["unit"] >> unit;
 	fs["cameraNumberL"] >> cameraNumberL;
 	fs["cameraNumberR"] >> cameraNumberR;

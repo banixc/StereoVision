@@ -41,3 +41,9 @@ bool SeparatedStereoCamera::next()
 
 	return true;
 }
+
+void SeparatedStereoCamera::setF()
+{
+	//captureL.set(CV_CAP_PROP_SETTINGS, 1);
+	captureR.set(CV_CAP_PROP_SETTINGS, 1);
+}

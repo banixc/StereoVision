@@ -33,7 +33,7 @@ void UniteStereoCamera::setFrame(int width, int height)
 		cout << "请输入设置的分辨率(长 宽)>";
 		cin >> width >> height;
 	}
-
+	width *= 2;
 	capture.set(CV_CAP_PROP_FRAME_WIDTH, width);
 	capture.set(CV_CAP_PROP_FRAME_HEIGHT, height);
 }
@@ -53,10 +53,14 @@ bool UniteStereoCamera::next()
 
 	left.create(Size(width / 2, height), currentFrame.type());
 	right.create(Size(width / 2, height), currentFrame.type());
-
-	//left
-	currentFrame(Rect(0, 0, width / 2, height)).copyTo(right);
-	//right
+	//左摄像头当前帧
 	currentFrame(Rect(width / 2, 0, width / 2, height)).copyTo(left);
+	//右摄像头当前帧
+	currentFrame(Rect(0, 0, width / 2, height)).copyTo(right);
 
+}
+
+void UniteStereoCamera::setF()
+{
+	capture.set(CV_CAP_PROP_SETTINGS, 1);
 }

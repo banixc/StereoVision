@@ -10,7 +10,7 @@ public:
 	ParamsLoader();
 	~ParamsLoader();
 	BaseStereoCamera* getCamera();
-	int unit, cameraNumberL, cameraNumberR, frameWidth, frameHeight, gridW, gridH, cutFrameNumber;
+	int unit, cameraNumberL, cameraNumberR, frameWidth, frameHeight, gridW, gridH, cutFrameNumber, mod;
 
 private:
 	const char* filename = FILENAME;

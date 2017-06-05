@@ -6,6 +6,7 @@ class SeparatedStereoCamera :
 	public BaseStereoCamera
 {
 private:
+	//×óÓÒÉãÏñÍ·
 	VideoCapture captureL,captureR;
 
 public:
@@ -16,5 +17,6 @@ public:
 	bool isOpened();
 	void setFrame(int width = 0, int height = 0);
 	bool next();
+	void setF();
 };
 
