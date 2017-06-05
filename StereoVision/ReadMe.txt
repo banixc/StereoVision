@@ -13,8 +13,8 @@ StereoVision.vcxproj
 StereoVision.vcxproj.filters
     这是使用“应用程序向导”生成的 VC++ 项目筛选器文件。它包含有关项目文件与筛选器之间的关联信息。在 IDE 中，通过这种关联，在特定节点下以分组形式显示具有相似扩展名的文件。例如，“.cpp”文件与“源文件”筛选器关联。
 
-StereoVision.cpp
-    这是主应用程序源文件。
+StereoVision.cpp 
+    这是主程序，主要包含读取参数，加载摄像头，截取照片，显示视差并计算的功能
 
 /////////////////////////////////////////////////////////////////////////////
 其他标准文件:
@@ -28,3 +28,18 @@ StdAfx.h, StdAfx.cpp
 应用程序向导使用“TODO:”注释来指示应添加或自定义的源代码部分。
 
 /////////////////////////////////////////////////////////////////////////////
+
+BaseStereoCamera
+    摄像机基类
+
+UniteStereoCamera
+    联合式立体摄像机类，继承BaseStereoCamera类
+    
+SeparatedStereoCamera
+    分离式立体摄像机类，继承BaseStereoCamera类
+    
+ParamsLoader
+    加载摄像机参数类，主要加载input.yml的参数
+    
+
+    
