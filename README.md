@@ -3,6 +3,21 @@
 ## require: 
   * VS 2015
   * OpenCV 3.2
+  * matlab
+  
+## 用法
+  * 截取图片
+  在input.yml中设置相关的参数
+    mod:1
+    ... 
+  * 参数转换 获取视差图 提取距离信息
+  在input.yml中设置相关的参数
+    mod:2
+    ...
+    
+   在生成的视差图上点击某个点 在控制台中会输出对应点的坐标
+  
+  
   
 ## input.yml
 
@@ -26,7 +41,7 @@
 摄像头分辨率
 
 #### gridW(H)
-角点数量的长宽
+标定板角点数量的长宽
 
 #### cutFrameNumber
 要截取的图片数量
@@ -39,3 +54,4 @@ m2y2.m的工作为读取matlab的标定结果 *.mat 文件 并将其转换为yml
 
   load('matlab.mat'); %加载标定的结果文件%
   dym_matlab2opencv(); %将matlab文件转换为opencv能识别的格式并写入到文件里%
+  
